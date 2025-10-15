@@ -26,6 +26,28 @@
     </style>
 </head> 
 <body>
+    <style>
+  .name-box {
+    position: relative;
+    display: inline-block;
+  }
+
+  .example input {
+    border-color: crimson;
+    padding: 8px;
+    border-radius: 5px;
+  }
+
+  .input-label {
+    background-color: white;
+    color: crimson;
+    font-size: 11px;
+    position: relative;
+    left: 25px;
+    top: -7px;
+    padding: 0 2px;
+  }
+   </style>
     <div class="checkout page">
        <ul class="ITEMS"><h2 class="items box">ITEMS</h2>
         <li><h2 class="item 1">1x Cappucino $6.00</h2></li>
@@ -36,36 +58,44 @@
          <li><h2 class=" item 3">1x Croissant $5.37</h2></li>
             <h4 class=" item 3 detail">Butter</h4>
         </ul>
+
+    <div class="name-box">
+        <h2 class="name box">NAME</h2>
+        <label for="name box" class="input-label">Name for order</label>
+        <input id="name box" class="example-input" placeholder="Jane Smith"/> 
+
+    
+    </div>
+    <div class="payment">
+        <h2 class="payment box">PAYMENT</h2>
+        <label for="payment box" class="input-label">Card number</label>
+        <input id="payment box" class="example-input" placeholder="xxxx xxxx xxxx xxxx "/>
+    </div>
+    <div class="second payment">
+        <label for="cvv" class="input-label">CVV</label>
+        <input id="cvv" class="example-input" placeholder="xxx"/>
+    </div>
+<div class="total-box"> 
+    <ul>    
+        <li class="total">
+            <span>Subtotal:</span>
+            <span>$19.27</span>
+        </li>   
+        <li class="total">
+            <span>Tax:</span>
+            <span>$1.54</span>  
+        </li>
+        <li class="total">
+            <span>Total:</span>
+            <span>$20.81</span>
+        </li>
+    </ul>
+</div>
     </body>
     
-
-</div>
-    <link rel="stylesheet" href="homepage.css">
-    <nav>
-        <a href="homepage.html">Home</a>
-        <a href="menu.html">Menu</a>
-        <a href="checkout.html">Checkout</a>
-    </nav>
-    <main>
-        <h2>Checkout</h2>
-        <form action="submit_order" method="POST">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required><br><br>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required><br><br>
-
-            <label for="address">Address:</label>
-            <input type="text" id="address" name="address" required><br><br>
-
-            <label for="payment">Payment Method:</label>
-            <select id="payment" name="payment" required>
-                <option value="credit_card">Credit Card</option>
-                <option value="paypal">PayPal</option>
-                <option value="apple_pay">Apple Pay</option>
-            </select><br><br>
-
-            <button type="submit">Submit Order</button>
+    <div class="order button">  
+            <button type="submit">Place order</button>
+            </div>  
         </form>
     </main>
 </body>
