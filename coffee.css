@@ -4,7 +4,22 @@
 
 body {
   padding: 10px;
-  radius: 50px;
+  margin: 0;
   background-color: #efefef;
   font-family: 'Open Sans', sans-serif;
+}
+.logo {
+    width: 50px; /* Adjust the size of the logo */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Space between logo and title */
+}
+.page header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: #6f4e37; /* Coffee brown color */
+  justify-content: center
+  padding: 10px;
+  grid-area: nav-header;
+  font-size: 15px;
 }

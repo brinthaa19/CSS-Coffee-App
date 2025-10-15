@@ -3,100 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coffee App Checkout</title>
-<body>
-    <h1 style="text-align: center;">Coffee Masters</h1>
-    <img 
-    class="logo"
-    src="https://btholt.github.io/complete-intro-to-web-dev-v3/images/coffee_masters_logo.png" alt="coffee app logo" style="display: block; margin: 0 auto; width: 50px; height: auto: 50px;">
-    <link
-  href="https://fonts.googleapis.com/css2?family=sans-serif:wght@400;700&display=swap"
-  rel="stylesheet"
-/> 
+  <link 
+   href="https://fonts.googleapis.com/css2?family=sans-serif:wght@400;700&display=swap" 
+   rel="stylesheet" />   
+    <title>Coffee Masters</title>
+    <link rel="stylesheet" href="coffee.css">  
 </head>
-   <style>
-        .custom-list {
-            list-style-type: none; /* Remove default bullets */
-            padding: 0; /* Remove padding */
-        }
-
-        .custom-list li::before {
-            content: "1x "; /* Add "1x" before each list item */
-        }
-    </style>
-</head> 
 <body>
-    <style>
-  .name-box {
-    position: relative;
-    display: inline-block;
-  }
+    <div class="my-page">
+        <div class="page-header">   
+          <img    class="logo" src="https://btholt.github.io/complete-intro-to-web-dev-v3/images/coffee_masters_logo.png" alt="coffee app logo" />
+         <h1 class="design">Coffee Masters</h1>
+        </div>
 
-  .example input {
-    border-color: crimson;
-    padding: 8px;
-    border-radius: 5px;
-  }
+      
+        <div class="item-box">
+            <h2>ITEMS</h2>
+         <ul class="item-list">
+            <li>
+              <div class="item">
+              <span class="item-name">Cappuccino</span>
+              <span class="item-price">$6.00</span>
+            <ul class="item-detail">
+                <li>Light Foam </li>
+            </ul>
+            </li> 
+            
+            <li>
+                <div class="item">
+                <span class="item-name">Cappucino</span>
+                <span class="item-price">$7.90</span>
+            <ul class="item-detail">
+                <li>Almond Milk</li>
+                <li>Double Espresso Shot</li>
+            </ul>
+            </li>
+ <li>
+                <div class="item">
+                <span class="item-name">Croissant</span>
+                <span class="item-price">$5.37</span>
+            <ul class="item-detail">
+                <li>Butter</li>
+            </ul>
+            </li>
+         </ul>
+        </div>
 
-  .input-label {
-    background-color: white;
-    color: crimson;
-    font-size: 11px;
-    position: relative;
-    left: 25px;
-    top: -7px;
-    padding: 0 2px;
-  }
-   </style>
-    <div class="checkout page">
-       <ul class="ITEMS"><h2 class="items box">ITEMS</h2>
-        <li><h2 class="item 1">1x Cappucino $6.00</h2></li>
-            <h4 class="item 1 detail">Light Foam</h4>
-        <li><h2 class="item 1"> 1x Cappucino $7.90</h2></li>
-            <h4 class="item 2 detail">Almond Milk</h4>
-                <h4 class="item 2 detail">Double Espresso Shot</h4>
-         <li><h2 class=" item 3">1x Croissant $5.37</h2></li>
-            <h4 class=" item 3 detail">Butter</h4>
+        <div class="name-box">
+            <h2 class="name-box-title">NAME</h2>
+            <div class="input-group">
+                <label for="name-box" class="input-label">Name for order</label>
+                <input id="name-box" class="example-input" placeholder="Jane Smith"/> 
+        </div>
+        <div class="payment">
+            <h2 class="payment-box-title">PAYMENT</h2>
+            <label for="payment-box" class="input-label">Card number</label>
+            <input id="payment box" class="example-input" placeholder="xxxx xxxx xxxx xxxx "/>
+        </div>
+        <div class="second-payment">
+            <label for="cvv" class="input-label">CVV</label>
+            <input id="cvv" class="example-input" placeholder="xxx"/>
+        </div>
+    <div class="total-box"> 
+        <ul>    
+            <li class="total">
+                <span>Subtotal:</span>
+                <span>$19.27</span>
+            </li>   
+            <li class="total">
+                <span>Tax:</span>
+                <span>$1.54</span>  
+            </li>
+            <li class="total">
+                <span>Total:</span>
+                <span>$20.81</span>
+            </li>
         </ul>
-
-    <div class="name-box">
-        <h2 class="name box">NAME</h2>
-        <label for="name box" class="input-label">Name for order</label>
-        <input id="name box" class="example-input" placeholder="Jane Smith"/> 
-
-    
     </div>
-    <div class="payment">
-        <h2 class="payment box">PAYMENT</h2>
-        <label for="payment box" class="input-label">Card number</label>
-        <input id="payment box" class="example-input" placeholder="xxxx xxxx xxxx xxxx "/>
-    </div>
-    <div class="second payment">
-        <label for="cvv" class="input-label">CVV</label>
-        <input id="cvv" class="example-input" placeholder="xxx"/>
-    </div>
-<div class="total-box"> 
-    <ul>    
-        <li class="total">
-            <span>Subtotal:</span>
-            <span>$19.27</span>
-        </li>   
-        <li class="total">
-            <span>Tax:</span>
-            <span>$1.54</span>  
-        </li>
-        <li class="total">
-            <span>Total:</span>
-            <span>$20.81</span>
-        </li>
-    </ul>
-</div>
-    </body>
-    
-    <div class="order button">  
-            <button type="submit">Place order</button>
-            </div>  
-        </form>
-    </main>
+        </body>
+        
+        <div class="order button">  
+                <button type="submit">Place order</button>
+                </div>  
+            </form>
+        </main>
 </body>
 </html>
