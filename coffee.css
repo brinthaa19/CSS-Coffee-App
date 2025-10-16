@@ -3,23 +3,219 @@
 }
 
 body {
-  padding: 10px;
+  padding: 0;
   margin: 0;
   background-color: #efefef;
   font-family: 'Open Sans', sans-serif;
 }
 .logo {
-    width: 50px; /* Adjust the size of the logo */
-    height: auto; /* Maintain aspect ratio */
-    margin-right: 10px; /* Space between logo and title */
+    width: 50px; 
+    height: auto;
+    margin-right: 10px; 
+    position: relative;
+  top: 2 px;
 }
-.page header {
+
+.page {
+    display: grid;
+    row-gap: 30px;
+    column-gap: 30px;
+    width: 100%;
+    padding: 30px;
+    margin: 0 auto;
+  grid-template-areas:
+    "item-box name-box"
+    "item-box payment"
+    "item-box second-payment"
+    "total-box total-box";
+  grid-template-columns: 1fr 1fr;
+}
+.my-page {
+  display: grid;
+  grid-template-areas:
+    "nav-header nav-header nav-header"
+    "left-box left-box ur-box"
+    "left-box left-box lr-box"
+    "lower-box lower-box lower-box"
+    "footer footer footer";
+}
+
+.page-header {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
-  background-color: #6f4e37; /* Coffee brown color */
-  justify-content: center
+  background-color: #43281c; 
+  justify-content: center;
   padding: 10px;
   grid-area: nav-header;
   font-size: 15px;
+  color: #fbf2c0;
 }
+.custom-list {
+     list-style-type: none; 
+            padding: 0; 
+        }
+
+        .custom-list li::before {
+            content: "1x "; 
+        }
+
+.checkout {
+  grid-area: left-box;
+  background-color: #eee1d5;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgb( 0 0 0 / 0.2);
+  margin: 10px; 
+  background-color: red;
+
+}
+
+.name {
+    position: relative;
+  display: block;
+    background-color: #eee1d5;
+    min-height: 400px;
+
+  }
+
+  .example-input {
+    border-color: #885a2d;
+    background-color: #eee1d5;
+    padding: 8px;
+    border-radius: 100px;
+    left: 5px;
+  }
+
+  .input-label {
+    border-color: #885a2d;
+    font-size: 11px;
+    position: relative;
+    top: -12px;
+    left: 20px;
+    padding: 0 8px;
+    color: #885a2d;
+    
+  }
+
+  .item-box {
+    background-color: #eee1d5;
+    font-weight: normal;
+    font-size: 16px; 
+    font: 'Open Sans', sans-serif;
+    text-align: left;
+    border-radius: 5px;  
+    color: #885a2d;
+    margin-bottom: 20px;
+    padding: 15px;
+    width: 100%;
+
+  }
+
+  .item-name {
+    font-weight: bold;
+    color:#000000;
+
+  }
+.item-list {
+    list-style-type: none; 
+    padding: 0; 
+    margin: 0;
+    color: #000000;
+    font: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+.item {
+  display: grid;
+  border-bottom: 2px solid #ddb892;
+  padding: 10px 0;
+  grid-template-columns: 48px 1fr 120px;
+  grid-template-areas:
+    "quantity item-name item-price"
+    "quantity item-detail item-price";
+  gap: 6px 12px;
+  align-items: start;
+}
+.item:last-child {
+  border-bottom: none;
+}
+.item-detail {
+  grid-area: options;
+  color: #B08968;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+
+.quantity { grid-area: quantity; justify-self: center; color: #6b4a34; }
+.item-name { grid-area: item-name; font-weight: 600; color: #43281c; }
+.item-price { grid-area: item-price; justify-self: end; color: #43281c; }
+.item-detail { grid-area: item-detail; margin: 0; padding-left: 0.25rem; color: #6b4a34; list-style: none; font-size: 13px; }
+
+.name-box {
+    grid-area: name-box;
+    background-color: #eee1d5;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgb( 0 0 0 / 0.2);
+    margin: 10px;
+    height: 40%;
+  color: #885a2d;
+  margin-bottom: 20px;
+}
+  .payment {
+    grid-area: payment;
+    background-color: #eee1d5;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    color: #885a2d;
+  }
+  .second-payment {
+    grid-area: second-payment;
+    background-color: #eee1d5;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+  }
+.total-box { 
+    margin: 10px;
+    background-color: white;
+    padding: 10px; 
+    grid-area: total-box;
+    box-shadow: 0 1px 3px rgb( 0 0 0 / 0.2);    
+    text-align: center;
+    font-size: 16px;
+    grid-template-areas: 
+      "total amount"
+      "total amount"
+      "total amount";
+}
+
+.total {
+    
+    color: #000000;
+    font-size: 16px;
+    text-align: left;
+}
+
+.total:last-child {
+  font-weight: bold;
+
+}
+.order.button { 
+    margin: 10px; 
+}
+
+.spacer {
+  height: -20px;
+}
+
+.spacer.2 {
+  height: 20px;
+}
+
+
+
